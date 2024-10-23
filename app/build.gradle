@@ -1,15 +1,15 @@
 //noinspection GradleDynamicVersion
 apply plugin: 'com.android.application'
 //apply plugin: 'com.jakewharton.hugo'
-apply from: '../config.gradle'
+//apply from: '../config.gradle'
 
 android {
     signingConfigs {
         config {
-            keyAlias release.keyAlias
-            keyPassword release.keyPassword
-            storeFile release.storeFile
-            storePassword release.storePassword
+//            keyAlias release.keyAlias
+//            keyPassword release.keyPassword
+//            storeFile release.storeFile
+//            storePassword release.storePassword
         }
     }
     compileSdkVersion 31
@@ -36,7 +36,7 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.debug
         }
     }
     lintOptions {
